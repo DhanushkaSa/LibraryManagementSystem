@@ -44,5 +44,15 @@
             <TableColumn fx:id="Telephone" prefWidth="145.60003662109375" text="Telephone" />
         </columns>
       </TableView>
+      <Label layoutX="29.0" layoutY="548.0" prefHeight="34.0" prefWidth="164.0" text="Member Count" textFill="#fc0909">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMemberCount" layoutX="222.0" layoutY="548.0" prefHeight="34.0" prefWidth="66.0" textFill="#fc0909">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

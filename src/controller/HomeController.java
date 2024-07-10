@@ -7,9 +7,6 @@ import java.net.URL;
 
 import java.util.ArrayList;
 
-
-
-
 import dto.MemberDto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,6 +15,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -29,11 +27,10 @@ import service.custom.MemberService;
 
 public class HomeController {
 
-    private MemberService service=(MemberService) ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.MEMBERS);
+    private MemberService service = (MemberService) ServiceFactory.getInstance()
+            .getService(ServiceFactory.ServiceType.MEMBERS);
 
     public HomeController() throws ClassNotFoundException, SQLException {
-       
-
 
     }
 
@@ -80,14 +77,15 @@ public class HomeController {
     private AnchorPane root;
 
     @FXML
+    private Label lblMemberCount;
+
+    @FXML
     void btnMembersOnAction(ActionEvent event) throws IOException {
-          
-         this.root.getChildren().clear();
-          URL resource = getClass().getResource("/view/Member.fxml");
-          Parent root = FXMLLoader.load(resource);
-          this.root.getChildren().add(root);
-        
-          
+
+        this.root.getChildren().clear();
+        URL resource = getClass().getResource("/view/Member.fxml");
+        Parent root = FXMLLoader.load(resource);
+        this.root.getChildren().add(root);
 
     }
 
@@ -107,6 +105,10 @@ public class HomeController {
 
         ObservableList<MemberDto> data = FXCollections.observableArrayList(dtoArray);
         this.tblMember.setItems(data);
+        int MemberCount = tblMember.getItems().size();
+        lblMemberCount.setText(Integer.toString(MemberCount));
     }
+
+    
 
 }

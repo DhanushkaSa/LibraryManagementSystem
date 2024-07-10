@@ -19,4 +19,6 @@ public interface MemberDao extends SuperDao {
 
     public MemberEntity get(String Member_Id)throws ClassNotFoundException, SQLException;
 
+   
+
 }
