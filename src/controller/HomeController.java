@@ -3,11 +3,15 @@ package controller;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.net.URL;
 
 import java.util.ArrayList;
 
 import dto.MemberDto;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +25,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import service.ServiceFactory;
 import service.ServiceFactory.ServiceType;
 import service.custom.MemberService;
@@ -33,9 +38,6 @@ public class HomeController {
     public HomeController() throws ClassNotFoundException, SQLException {
 
     }
-
-    @FXML
-    private AnchorPane home;
 
     @FXML
     private TableView<MemberDto> tblMember;
@@ -59,7 +61,23 @@ public class HomeController {
     private TableColumn<MemberDto, String> Telephone;
 
     @FXML
-    void btnBookCategoryOnAction(ActionEvent event) {
+    private AnchorPane root;
+
+    @FXML
+    private Label dateTimeLabel;
+
+    
+    
+
+    @FXML
+    void btnBookCategoryOnAction(ActionEvent event) throws IOException {
+        this.root.getChildren().clear();
+        URL resource = getClass().getResource("/view/BookCategory.fxml");
+        Parent root = FXMLLoader.load(resource);
+        this.root.getChildren().add(root);
+        
+
+        
 
     }
 
@@ -74,9 +92,6 @@ public class HomeController {
     }
 
     @FXML
-    private AnchorPane root;
-
-    @FXML
     private Label lblMemberCount;
 
     @FXML
@@ -89,6 +104,7 @@ public class HomeController {
 
     }
 
+    private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd  HH:mm:ss");
     @FXML
     public void initialize() throws ClassNotFoundException, SQLException {
         MemberId.setCellValueFactory(new PropertyValueFactory<>("member_Id"));
@@ -98,6 +114,13 @@ public class HomeController {
         Age.setCellValueFactory(new PropertyValueFactory<>("age"));
         Telephone.setCellValueFactory(new PropertyValueFactory<>("telephone"));
         loadTable();
+        
+        Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            LocalDateTime now = LocalDateTime.now();
+            dateTimeLabel.setText(now.format(dateTimeFormatter));
+        }), new KeyFrame(Duration.seconds(1)));
+        clock.setCycleCount(Timeline.INDEFINITE);
+        clock.play();
     }
 
     public void loadTable() throws ClassNotFoundException, SQLException {
@@ -108,7 +131,5 @@ public class HomeController {
         int MemberCount = tblMember.getItems().size();
         lblMemberCount.setText(Integer.toString(MemberCount));
     }
-
-    
 
 }

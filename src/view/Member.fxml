@@ -21,7 +21,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtMemberId" blendMode="MULTIPLY" layoutX="237.0" layoutY="120.0" prefHeight="34.0" prefWidth="138.0" promptText="MemberId">
+      <TextField fx:id="txtMemberId" blendMode="MULTIPLY" layoutX="241.0" layoutY="120.0" prefHeight="34.0" prefWidth="138.0" promptText="MemberId" style="-fx-background-radius: 10;">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
@@ -34,7 +34,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtFirstName" blendMode="MULTIPLY" layoutX="241.0" layoutY="209.0" prefHeight="34.0" prefWidth="195.0" promptText="First Name">
+      <TextField fx:id="txtFirstName" blendMode="MULTIPLY" layoutX="241.0" layoutY="209.0" prefHeight="34.0" prefWidth="195.0" promptText="First Name" style="-fx-background-radius: 10;">
          <font>
             <Font size="21.0" />
          </font>
@@ -44,7 +44,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtLastName" blendMode="MULTIPLY" layoutX="238.0" layoutY="279.0" prefHeight="34.0" prefWidth="202.0" promptText="Last Name">
+      <TextField fx:id="txtLastName" blendMode="MULTIPLY" layoutX="238.0" layoutY="279.0" prefHeight="34.0" prefWidth="202.0" promptText="Last Name" style="-fx-background-radius: 10;">
          <font>
             <Font size="21.0" />
          </font>
@@ -54,7 +54,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAddress" blendMode="MULTIPLY" layoutX="237.0" layoutY="362.0" prefHeight="34.0" prefWidth="309.0" promptText="Address">
+      <TextField fx:id="txtAddress" blendMode="MULTIPLY" layoutX="237.0" layoutY="362.0" prefHeight="34.0" prefWidth="309.0" promptText="Address" style="-fx-background-radius: 10;">
          <font>
             <Font size="21.0" />
          </font>
@@ -64,7 +64,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAge" blendMode="MULTIPLY" layoutX="237.0" layoutY="434.0" prefHeight="34.0" prefWidth="96.0" promptText="Age">
+      <TextField fx:id="txtAge" blendMode="MULTIPLY" layoutX="237.0" layoutY="434.0" prefHeight="34.0" prefWidth="96.0" promptText="Age" style="-fx-background-radius: 10;">
          <font>
             <Font size="21.0" />
          </font>
@@ -74,7 +74,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtTelephone" blendMode="MULTIPLY" layoutX="237.0" layoutY="506.0" prefHeight="34.0" prefWidth="179.0" promptText="Telephone">
+      <TextField fx:id="txtTelephone" blendMode="MULTIPLY" layoutX="237.0" layoutY="506.0" prefHeight="34.0" prefWidth="179.0" promptText="Telephone" style="-fx-background-radius: 10;">
          <font>
             <Font size="21.0" />
          </font>

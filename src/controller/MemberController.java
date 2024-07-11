@@ -101,25 +101,38 @@ public class MemberController {
 
     public void save() {
         try {
+
             MemberDto dto = new MemberDto(txtMemberId.getText(), txtFirstName.getText(), txtLastName.getText(),
                     txtAddress.getText(), Integer.parseInt(txtAge.getText()), txtTelephone.getText());
-            String resp = service.save(dto);
-            JOptionPane.showMessageDialog(null, resp);
-            clearData();
-            loadTable();
+
+            
+                String resp = service.save(dto);
+                JOptionPane.showMessageDialog(null, resp);
+                clearData();
+                loadTable();
+            
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Save Fail !!");
         }
     }
 
     public void delete() {
         try {
-            String Member_Id = txtMemberId.getText();
-            String resp = service.Delete(Member_Id);
-            JOptionPane.showMessageDialog(null, resp);
-            clearData();
-            loadTable();
+            if (txtMemberId.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Please Select a member !!");
+            } else {
+                String Member_Id = txtMemberId.getText();
+
+                int value = JOptionPane.showConfirmDialog(null, "Do you want to delete this member ?", Member_Id, 0, 0);
+                if (value == 0) {
+                    String resp = service.Delete(Member_Id);
+                }
+
+                clearData();
+                loadTable();
+            }
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
 
@@ -132,12 +145,14 @@ public class MemberController {
         try {
             MemberDto dto = new MemberDto(txtMemberId.getText(), txtFirstName.getText(), txtLastName.getText(),
                     txtAddress.getText(), Integer.parseInt(txtAge.getText()), txtTelephone.getText());
+
             String resp = service.update(dto);
             JOptionPane.showMessageDialog(null, resp);
             clearData();
             loadTable();
+
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Update Fail !!");
         }
     }
 

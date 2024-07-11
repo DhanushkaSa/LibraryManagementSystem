@@ -11,8 +11,8 @@ import dto.MemberDto;
 import entity.MemberEntity;
 
 public class MemberServiceImpl implements MemberService {
-
-    private MemberDao dao = (MemberDao) DaoFactory.getInstance().getDaoType(DaoFactory.DaoType.MEMBERS);
+    
+    MemberDao dao=(MemberDao) DaoFactory.getInstance().getDaoType(DaoFactory.DaoType.MEMBERS);
 
     @Override
     public String save(MemberDto dto) throws ClassNotFoundException, SQLException {
@@ -52,7 +52,5 @@ public class MemberServiceImpl implements MemberService {
                 entity.getAddress(), entity.getAge(), entity.getTelephone());
         return dto;
     }
-
-    
 
 }

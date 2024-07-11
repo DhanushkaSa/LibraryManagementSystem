@@ -36,8 +36,14 @@
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUser" layoutX="1169.0" layoutY="206.0" prefHeight="38.0" prefWidth="234.0" promptText="Username" />
-      <PasswordField fx:id="txtPassword" layoutX="1169.0" layoutY="273.0" prefHeight="38.0" prefWidth="234.0" promptText="Password" />
+      <TextField fx:id="txtUser" blendMode="MULTIPLY" layoutX="1169.0" layoutY="206.0" prefHeight="38.0" prefWidth="234.0" promptText="Username">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <PasswordField fx:id="txtPassword" blendMode="MULTIPLY" layoutX="1169.0" layoutY="273.0" prefHeight="38.0" prefWidth="234.0" promptText="Password">
+         <font>
+            <Font size="20.0" />
+         </font></PasswordField>
       <JFXButton layoutX="1072.0" layoutY="345.0" onAction="#btnLoginOnAction" prefHeight="56.0" prefWidth="122.0" style="-fx-background-color: #53A657; -fx-background-radius: 15;" text="Login" textFill="#480606">
          <font>
             <Font size="26.0" />

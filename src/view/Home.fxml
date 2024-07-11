@@ -54,5 +54,10 @@
             <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
+      <Label fx:id="dateTimeLabel" layoutX="1242.0" layoutY="14.0" prefHeight="43.0" prefWidth="277.0" text="Label">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

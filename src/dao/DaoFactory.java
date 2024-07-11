@@ -1,5 +1,8 @@
 package dao;
 
+import java.sql.SQLException;
+
+import dao.custom.BookCategoryDaoImpl;
 import dao.custom.MemberDaoImpl;
 
 public class DaoFactory {
@@ -27,7 +30,7 @@ public class DaoFactory {
                 return new MemberDaoImpl();
 
             case BOOK_CATEGORY:
-                return null;
+                return new BookCategoryDaoImpl();
 
             case BOOKS:
                 return null;
