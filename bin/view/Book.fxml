@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="1530.0" style="-fx-background-color: #BA68C8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookController">
+   <children>
+      <Label alignment="CENTER" layoutX="149.0" layoutY="14.0" prefHeight="14.0" prefWidth="1234.0" text="Book List">
+         <font>
+            <Font size="54.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="25.0" layoutY="23.0" onAction="#btnBackOnClick" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #FDD835; -fx-background-radius: 15;" text="Back">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="45.0" layoutY="133.0" prefHeight="42.0" prefWidth="154.0" text="Book ID" textFill="BLUE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookId" blendMode="MULTIPLY" layoutX="251.0" layoutY="132.0" prefHeight="46.0" prefWidth="126.0" promptText="Book ID">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label layoutX="45.0" layoutY="201.0" prefHeight="46.0" prefWidth="186.0" text="Book Name" textFill="BLUE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookName" blendMode="MULTIPLY" layoutX="251.0" layoutY="200.0" prefHeight="46.0" prefWidth="347.0" promptText="Book Name">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="271.0" prefHeight="42.0" prefWidth="154.0" text="Language" textFill="BLUE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLanguage" blendMode="MULTIPLY" layoutX="254.0" layoutY="270.0" prefHeight="46.0" prefWidth="213.0" promptText="Language">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label layoutX="45.0" layoutY="342.0" prefHeight="42.0" prefWidth="154.0" text="Author" textFill="BLUE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAuthor" blendMode="MULTIPLY" layoutX="251.0" layoutY="341.0" prefHeight="46.0" prefWidth="347.0" promptText="Author">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="414.0" prefHeight="46.0" prefWidth="178.0" text="Book Count" textFill="BLUE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookCount" blendMode="MULTIPLY" layoutX="254.0" layoutY="413.0" prefHeight="46.0" prefWidth="135.0" promptText="Book Count">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label layoutX="687.0" layoutY="123.0" prefHeight="46.0" prefWidth="264.0" text="Book Category Id" textFill="BLUE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCategoryId" blendMode="MULTIPLY" layoutX="985.0" layoutY="123.0" prefHeight="46.0" prefWidth="135.0" promptText="Category ID">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="756.0" layoutY="188.0" onAction="#btnSearchOnClick" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: #FDD835; -fx-background-radius: 15;" text="Search">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblCategoryData" blendMode="MULTIPLY" layoutX="1156.0" layoutY="122.0" prefHeight="46.0" prefWidth="370.0" text="Book Category Display" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="100.0" layoutY="495.0" onAction="#btnSaveOnClick" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #2E7D32; -fx-background-radius: 15;" text="Save" textFill="#f4f1f1">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="250.0" layoutY="495.0" onAction="#btnUpdateOnClick" prefHeight="62.0" prefWidth="135.0" style="-fx-background-color: #0000FF; -fx-background-radius: 15;" text="Update" textFill="#f4f1f1">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="417.0" layoutY="495.0" onAction="#btnDeleteOnClick" prefHeight="46.0" prefWidth="126.0" style="-fx-background-color: #C62828; -fx-background-radius: 15;" text="Delete" textFill="#f4f1f1">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="BookTable" layoutX="624.0" layoutY="264.0" prefHeight="286.0" prefWidth="892.0">
+        <columns>
+          <TableColumn fx:id="BookId" prefWidth="75.0" text="Book ID" />
+          <TableColumn fx:id="BookName" prefWidth="206.39996337890625" text="Book Name" />
+            <TableColumn fx:id="Language" prefWidth="131.20001220703125" text="Language" />
+            <TableColumn fx:id="Author" prefWidth="182.4000244140625" text="Author" />
+            <TableColumn fx:id="BookCount" prefWidth="82.39990234375" text="Book Count" />
+            <TableColumn fx:id="Status" prefWidth="128.0" text="Status" />
+            <TableColumn fx:id="CategoryId" prefWidth="89.599853515625" text="Category ID" />
+        </columns>
+      </TableView>
+      <FontAwesomeIcon glyphName="BOOK" layoutX="543.0" layoutY="82.0" size="80">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.699619746026884" startY="0.37262361765814367">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.25224560499191284" green="0.027368420735001564" blue="0.821052610874176" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon glyphName="ARROW_LEFT" layoutX="38.0" layoutY="53.0" size="20" />
+   </children>
+</AnchorPane>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -41,7 +42,7 @@
           <TableColumn fx:id="CategoryName" prefWidth="227.20001220703125" text="Category Name" />
         </columns>
       </TableView>
-      <JFXButton layoutX="44.0" layoutY="40.0" onAction="#btnBackOnAction" prefHeight="50.0" prefWidth="101.0" style="-fx-background-color: #FDD835; -fx-background-radius: 15;" text="Back" textFill="#0d0d0d">
+      <JFXButton layoutX="25.0" layoutY="40.0" onAction="#btnBackOnAction" prefHeight="50.0" prefWidth="121.0" style="-fx-background-color: #FDD835; -fx-background-radius: 15;" text="Back" textFill="#0d0d0d">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
@@ -61,5 +62,8 @@
             <Font size="29.0" />
          </font>
       </JFXButton>
+      <FontAwesomeIcon glyphName="ARROW_LEFT" layoutX="35.0" layoutY="72.0" size="20" />
+      <FontAwesomeIcon glyphName="BOOK" layoutX="1348.0" layoutY="310.0" size="100" />
+      <FontAwesomeIcon fill="#262525" glyphName="BOOK" layoutX="1394.0" layoutY="260.0" size="100" />
    </children>
 </AnchorPane>

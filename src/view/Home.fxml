@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="1530.0" style="-fx-background-color: #82B050;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
@@ -14,17 +19,20 @@
             <Font name="System Bold Italic" size="66.0" />
          </font>
       </Label>
-      <JFXButton layoutX="58.0" layoutY="122.0" onAction="#btnMembersOnAction" prefHeight="90.0" prefWidth="194.0" style="-fx-background-color: #993BA9; -fx-background-radius: 20;" text="Members " textFill="#f5f5f7">
+      <JFXButton layoutX="78.0" layoutY="122.0" onAction="#btnMembersOnAction" prefHeight="90.0" prefWidth="231.0" style="-fx-background-color: #993BA9; -fx-background-radius: 20;" text="Members " textFill="#f5f5f7">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="440.0" layoutY="122.0" onAction="#btnBooksOnAction" prefHeight="89.0" prefWidth="164.0" style="-fx-background-color: #0000FF; -fx-background-radius: 20;" text="Books" textFill="#f5f5f7">
+      <JFXButton layoutX="440.0" layoutY="122.0" onAction="#btnBooksOnAction" prefHeight="90.0" prefWidth="202.0" style="-fx-background-color: #0000FF; -fx-background-radius: 20;" text="Books" textFill="#f5f5f7">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
+         <graphic>
+            <FontAwesomeIcon glyphName="BOOK" size="40" wrappingWidth="49.40002512931824" />
+         </graphic>
       </JFXButton>
-      <JFXButton layoutX="779.0" layoutY="121.0" onAction="#btnBookCategoryOnAction" prefHeight="90.0" prefWidth="266.0" style="-fx-background-color: #EF6C00; -fx-background-radius: 20;" text="Book Category" textFill="#f5f5f7">
+      <JFXButton layoutX="755.0" layoutY="121.0" onAction="#btnBookCategoryOnAction" prefHeight="90.0" prefWidth="312.0" style="-fx-background-color: #EF6C00; -fx-background-radius: 20;" text="Book Category" textFill="#f5f5f7">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
@@ -34,14 +42,14 @@
             <Font name="System Bold" size="31.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="tblMember" layoutX="14.0" layoutY="267.0" prefHeight="258.0" prefWidth="743.0">
+      <TableView fx:id="tblMember" layoutX="14.0" layoutY="276.0" prefHeight="258.0" prefWidth="743.0">
         <columns>
           <TableColumn fx:id="MemberId" prefWidth="75.0" text="Member Id" />
-          <TableColumn fx:id="FirstName" prefWidth="150.39996337890625" text="First Name" />
-            <TableColumn fx:id="LastName" minWidth="0.0" prefWidth="120.800048828125" text="Last Name" />
-            <TableColumn fx:id="Address" minWidth="0.0" prefWidth="188.79998779296875" text="Address" />
-            <TableColumn fx:id="Age" prefWidth="53.60003662109375" text="Age" />
-            <TableColumn fx:id="Telephone" prefWidth="145.60003662109375" text="Telephone" />
+          <TableColumn fx:id="FirstName" prefWidth="136.00006103515625" text="First Name" />
+            <TableColumn fx:id="LastName" prefWidth="140.0000762939453" text="Last Name" />
+            <TableColumn fx:id="Address" prefWidth="201.5999755859375" text="Address" />
+            <TableColumn fx:id="Age" minWidth="0.0" prefWidth="52.0" text="Age" />
+            <TableColumn fx:id="Telephone" minWidth="0.0" prefWidth="116.0" text="Telephone" />
         </columns>
       </TableView>
       <Label layoutX="29.0" layoutY="548.0" prefHeight="34.0" prefWidth="164.0" text="Member Count" textFill="#fc0909">
@@ -54,10 +62,37 @@
             <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
-      <Label fx:id="dateTimeLabel" layoutX="1242.0" layoutY="14.0" prefHeight="43.0" prefWidth="277.0" text="Label">
+      <Label fx:id="dateTimeLabel" layoutX="1242.0" layoutY="14.0" prefHeight="43.0" prefWidth="277.0" text="DateTime">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
+      <TextField fx:id="searchMember" layoutX="14.0" layoutY="221.0" prefHeight="43.0" prefWidth="290.0" promptText="Search Members">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <FontAwesomeIcon glyphName="HOME" layoutX="440.0" layoutY="85.0" size="80">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.2927756944083442" startY="0.5285171320229882">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2587134540081024" green="0.028070176020264626" blue="0.8421052694320679" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon glyphName="BOOK" layoutX="759.0" layoutY="164.0" size="25" />
+      <FontAwesomeIcon glyphName="BOOK" layoutX="773.0" layoutY="174.0" size="25" />
+      <FontAwesomeIcon glyphName="USER" layoutX="101.0" layoutY="161.0" size="25" />
+      <FontAwesomeIcon glyphName="USER" layoutX="81.0" layoutY="180.0" size="40" wrappingWidth="34.75713765621185" />
    </children>
 </AnchorPane>

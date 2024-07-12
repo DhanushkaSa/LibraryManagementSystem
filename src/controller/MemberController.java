@@ -10,6 +10,8 @@ import javax.swing.JOptionPane;
 import dto.MemberDto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -70,6 +72,8 @@ public class MemberController {
     @FXML
     private TableColumn<MemberDto, String> Telephone;
 
+    
+
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
         delete();
@@ -105,12 +109,10 @@ public class MemberController {
             MemberDto dto = new MemberDto(txtMemberId.getText(), txtFirstName.getText(), txtLastName.getText(),
                     txtAddress.getText(), Integer.parseInt(txtAge.getText()), txtTelephone.getText());
 
-            
-                String resp = service.save(dto);
-                JOptionPane.showMessageDialog(null, resp);
-                clearData();
-                loadTable();
-            
+            String resp = service.save(dto);
+            JOptionPane.showMessageDialog(null, resp);
+            clearData();
+            loadTable();
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Save Fail !!");
@@ -184,6 +186,8 @@ public class MemberController {
         txtTelephone.setText("");
     }
 
+    // private ObservableList<MemberDto> masterData = FXCollections.observableArrayList();
+
     @FXML
     public void initialize() throws ClassNotFoundException, SQLException {
         MemberId.setCellValueFactory(new PropertyValueFactory<>("member_Id"));
@@ -193,6 +197,8 @@ public class MemberController {
         Age.setCellValueFactory(new PropertyValueFactory<>("age"));
         Telephone.setCellValueFactory(new PropertyValueFactory<>("telephone"));
         loadTable();
+
+        
     }
 
     public void loadTable() throws ClassNotFoundException, SQLException {
@@ -200,6 +206,7 @@ public class MemberController {
 
         ObservableList<MemberDto> data = FXCollections.observableArrayList(dtoArray);
         this.tblMember.setItems(data);
+       
     }
 
 }

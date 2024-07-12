@@ -14,6 +14,8 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +24,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -66,8 +69,8 @@ public class HomeController {
     @FXML
     private Label dateTimeLabel;
 
-    
-    
+    @FXML
+    private TextField searchMember;
 
     @FXML
     void btnBookCategoryOnAction(ActionEvent event) throws IOException {
@@ -75,15 +78,15 @@ public class HomeController {
         URL resource = getClass().getResource("/view/BookCategory.fxml");
         Parent root = FXMLLoader.load(resource);
         this.root.getChildren().add(root);
-        
-
-        
 
     }
 
     @FXML
-    void btnBooksOnAction(ActionEvent event) {
-
+    void btnBooksOnAction(ActionEvent event) throws IOException {
+        this.root.getChildren().clear();
+        URL resource = getClass().getResource("/view/Book.fxml");
+        Parent root = FXMLLoader.load(resource);
+        this.root.getChildren().add(root);
     }
 
     @FXML
@@ -104,7 +107,9 @@ public class HomeController {
 
     }
 
+    private ObservableList<MemberDto> masterData = FXCollections.observableArrayList();
     private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd  HH:mm:ss");
+
     @FXML
     public void initialize() throws ClassNotFoundException, SQLException {
         MemberId.setCellValueFactory(new PropertyValueFactory<>("member_Id"));
@@ -114,7 +119,31 @@ public class HomeController {
         Age.setCellValueFactory(new PropertyValueFactory<>("age"));
         Telephone.setCellValueFactory(new PropertyValueFactory<>("telephone"));
         loadTable();
-        
+
+        FilteredList<MemberDto> filteredData = new FilteredList<>(masterData, p -> true);
+        searchMember.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(member -> {
+
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (member.getMember_Id().toLowerCase().contains(lowerCaseFilter) ||
+                        member.getFirstName().toLowerCase().contains(lowerCaseFilter) ||
+                        member.getLastName().toLowerCase().contains(lowerCaseFilter) ||
+                        member.getAddress().toLowerCase().contains(lowerCaseFilter) ||
+                        member.getTelephone().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                }
+                return false;
+            });
+        });
+        SortedList<MemberDto> sortedData = new SortedList<>(filteredData);
+        sortedData.comparatorProperty().bind(tblMember.comparatorProperty());
+        tblMember.setItems(sortedData);
+
         Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             LocalDateTime now = LocalDateTime.now();
             dateTimeLabel.setText(now.format(dateTimeFormatter));
@@ -130,6 +159,7 @@ public class HomeController {
         this.tblMember.setItems(data);
         int MemberCount = tblMember.getItems().size();
         lblMemberCount.setText(Integer.toString(MemberCount));
+        masterData.setAll(dtoArray);
     }
 
 }

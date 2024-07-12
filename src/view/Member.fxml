@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="1530.0" style="-fx-background-color: #EFC33D;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MemberController">
@@ -79,7 +83,7 @@
             <Font size="21.0" />
          </font>
       </TextField>
-      <TableView fx:id="tblMember" layoutX="604.0" layoutY="111.0" onMouseClicked="#get" prefHeight="317.0" prefWidth="736.0">
+      <TableView fx:id="tblMember" layoutX="593.0" layoutY="137.0" onMouseClicked="#get" prefHeight="317.0" prefWidth="736.0">
         <columns>
           <TableColumn fx:id="MemberId" prefWidth="85.5999755859375" text="Member Id" />
           <TableColumn fx:id="FirstName" prefWidth="124.79998779296875" text="First Name" />
@@ -99,15 +103,34 @@
             <Font size="32.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1060.0" layoutY="496.0" onAction="#btnDeleteOnAction" prefHeight="54.0" prefWidth="146.0" style="-fx-background-color: #C62828; -fx-background-radius: 15;" text="Delete" textFill="#f7f5f5">
+      <JFXButton layoutX="1060.0" layoutY="496.0" onAction="#btnDeleteOnAction" prefHeight="54.0" prefWidth="146.0" style="-fx-background-color: #C62828; -fx-background-radius: 15;" text="Logout" textFill="#f7f5f5">
          <font>
             <Font size="32.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="63.0" layoutY="27.0" onAction="#btnBackOnAction" prefHeight="46.0" prefWidth="108.0" style="-fx-background-color: #E53935; -fx-background-radius: 15;" text="Back" textFill="#f7f1f1">
+      <JFXButton buttonType="RAISED" layoutX="63.0" layoutY="27.0" onAction="#btnBackOnAction" prefHeight="46.0" prefWidth="108.0" style="-fx-background-radius: 15; -fx-background-color: #E53935;" text="Back" textFill="#f7f1f1">
          <font>
             <Font size="22.0" />
          </font>
       </JFXButton>
+      <FontAwesomeIcon glyphName="USER" layoutX="436.0" layoutY="65.0" size="70">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.11026615652294666" startY="0.3764258410087557">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2862745225429535" green="0.07450980693101883" blue="0.7882353067398071" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.876532793045044" green="0.8443664908409119" blue="0.9578947424888611" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon glyphName="ARROW_LEFT" layoutX="76.0" layoutY="57.0" size="20" wrappingWidth="19.69999361038208" />
    </children>
 </AnchorPane>
