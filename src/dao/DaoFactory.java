@@ -3,6 +3,7 @@ package dao;
 import java.sql.SQLException;
 
 import dao.custom.BookCategoryDaoImpl;
+import dao.custom.BookDaoImpl;
 import dao.custom.MemberDaoImpl;
 
 public class DaoFactory {
@@ -33,7 +34,7 @@ public class DaoFactory {
                 return new BookCategoryDaoImpl();
 
             case BOOKS:
-                return null;
+                return new BookDaoImpl();
 
             default:
                 return null;

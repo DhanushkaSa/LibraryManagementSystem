@@ -1,6 +1,7 @@
 package service;
 
 import service.custom.BookCategoryServiceImpl;
+import service.custom.BookServiceImpl;
 import service.custom.MemberServiceImpl;
 
 public class ServiceFactory {
@@ -29,7 +30,7 @@ public class ServiceFactory {
             case BOOK_CATEGORY:
                 return new BookCategoryServiceImpl();
             case BOOKS:
-                return null;
+                return new BookServiceImpl();
 
             default:
                 return null;

@@ -12,7 +12,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="1530.0" style="-fx-background-color: #BA68C8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookController">
    <children>
       <Label alignment="CENTER" layoutX="149.0" layoutY="14.0" prefHeight="14.0" prefWidth="1234.0" text="Book List">
@@ -110,15 +109,14 @@
             <Font size="29.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="BookTable" layoutX="624.0" layoutY="264.0" prefHeight="286.0" prefWidth="892.0">
+      <TableView fx:id="BookTable" layoutX="624.0" layoutY="264.0" onMouseClicked="#mouseClickOnTable" prefHeight="286.0" prefWidth="773.0">
         <columns>
           <TableColumn fx:id="BookId" prefWidth="75.0" text="Book ID" />
           <TableColumn fx:id="BookName" prefWidth="206.39996337890625" text="Book Name" />
             <TableColumn fx:id="Language" prefWidth="131.20001220703125" text="Language" />
-            <TableColumn fx:id="Author" prefWidth="182.4000244140625" text="Author" />
-            <TableColumn fx:id="BookCount" prefWidth="82.39990234375" text="Book Count" />
-            <TableColumn fx:id="Status" prefWidth="128.0" text="Status" />
-            <TableColumn fx:id="CategoryId" prefWidth="89.599853515625" text="Category ID" />
+            <TableColumn fx:id="Author" prefWidth="195.199951171875" text="Author" />
+            <TableColumn fx:id="BookCount" text="Book Count" />
+            <TableColumn fx:id="CategoryId" prefWidth="82.4000244140625" text="Category ID" />
         </columns>
       </TableView>
       <FontAwesomeIcon glyphName="BOOK" layoutX="543.0" layoutY="82.0" size="80">
