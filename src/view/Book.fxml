@@ -12,7 +12,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="1530.0" style="-fx-background-color: #BA68C8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1530.0" style="-fx-background-color: #BA68C8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookController">
    <children>
       <Label alignment="CENTER" layoutX="149.0" layoutY="14.0" prefHeight="14.0" prefWidth="1234.0" text="Book List">
          <font>
@@ -24,92 +24,92 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </JFXButton>
-      <Label layoutX="45.0" layoutY="133.0" prefHeight="42.0" prefWidth="154.0" text="Book ID" textFill="BLUE">
+      <Label layoutX="47.0" layoutY="212.0" prefHeight="42.0" prefWidth="154.0" text="Book ID" textFill="BLUE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtBookId" blendMode="MULTIPLY" layoutX="251.0" layoutY="132.0" prefHeight="46.0" prefWidth="126.0" promptText="Book ID">
+      <TextField fx:id="txtBookId" blendMode="MULTIPLY" layoutX="253.0" layoutY="211.0" prefHeight="46.0" prefWidth="126.0" promptText="Book ID" style="-fx-background-radius: 15;">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="45.0" layoutY="201.0" prefHeight="46.0" prefWidth="186.0" text="Book Name" textFill="BLUE">
+      <Label layoutX="47.0" layoutY="280.0" prefHeight="46.0" prefWidth="186.0" text="Book Name" textFill="BLUE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtBookName" blendMode="MULTIPLY" layoutX="251.0" layoutY="200.0" prefHeight="46.0" prefWidth="347.0" promptText="Book Name">
+      <TextField fx:id="txtBookName" blendMode="MULTIPLY" layoutX="253.0" layoutY="279.0" prefHeight="46.0" prefWidth="347.0" promptText="Book Name" style="-fx-background-radius: 15;">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="48.0" layoutY="271.0" prefHeight="42.0" prefWidth="154.0" text="Language" textFill="BLUE">
+      <Label layoutX="50.0" layoutY="350.0" prefHeight="42.0" prefWidth="154.0" text="Language" textFill="BLUE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtLanguage" blendMode="MULTIPLY" layoutX="254.0" layoutY="270.0" prefHeight="46.0" prefWidth="213.0" promptText="Language">
+      <TextField fx:id="txtLanguage" blendMode="MULTIPLY" layoutX="256.0" layoutY="349.0" prefHeight="46.0" prefWidth="213.0" promptText="Language" style="-fx-background-radius: 15;">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="45.0" layoutY="342.0" prefHeight="42.0" prefWidth="154.0" text="Author" textFill="BLUE">
+      <Label layoutX="47.0" layoutY="421.0" prefHeight="42.0" prefWidth="154.0" text="Author" textFill="BLUE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAuthor" blendMode="MULTIPLY" layoutX="251.0" layoutY="341.0" prefHeight="46.0" prefWidth="347.0" promptText="Author">
+      <TextField fx:id="txtAuthor" blendMode="MULTIPLY" layoutX="253.0" layoutY="420.0" prefHeight="46.0" prefWidth="347.0" promptText="Author" style="-fx-background-radius: 15;">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="48.0" layoutY="414.0" prefHeight="46.0" prefWidth="178.0" text="Book Count" textFill="BLUE">
+      <Label layoutX="50.0" layoutY="493.0" prefHeight="46.0" prefWidth="178.0" text="Book Count" textFill="BLUE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtBookCount" blendMode="MULTIPLY" layoutX="254.0" layoutY="413.0" prefHeight="46.0" prefWidth="135.0" promptText="Book Count">
+      <TextField fx:id="txtBookCount" blendMode="MULTIPLY" layoutX="256.0" layoutY="492.0" prefHeight="46.0" prefWidth="135.0" promptText="Book Count" style="-fx-background-radius: 15;">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="687.0" layoutY="123.0" prefHeight="46.0" prefWidth="264.0" text="Book Category Id" textFill="BLUE">
+      <Label layoutX="690.0" layoutY="213.0" prefHeight="46.0" prefWidth="264.0" text="Book Category Id" textFill="BLUE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCategoryId" blendMode="MULTIPLY" layoutX="985.0" layoutY="123.0" prefHeight="46.0" prefWidth="135.0" promptText="Category ID">
+      <TextField fx:id="txtCategoryId" blendMode="MULTIPLY" layoutX="988.0" layoutY="213.0" prefHeight="46.0" prefWidth="135.0" promptText="Category ID" style="-fx-background-radius: 15;">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <JFXButton layoutX="756.0" layoutY="188.0" onAction="#btnSearchOnClick" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: #FDD835; -fx-background-radius: 15;" text="Search">
+      <JFXButton layoutX="759.0" layoutY="278.0" onAction="#btnSearchOnClick" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: #FDD835; -fx-background-radius: 15;" text="Search">
          <font>
             <Font size="21.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblCategoryData" blendMode="MULTIPLY" layoutX="1156.0" layoutY="122.0" prefHeight="46.0" prefWidth="370.0" text="Book Category Display" textFill="RED">
+      <Label fx:id="lblCategoryData" blendMode="MULTIPLY" layoutX="1159.0" layoutY="212.0" prefHeight="46.0" prefWidth="370.0" text="Book Category Display" textFill="RED">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <JFXButton layoutX="100.0" layoutY="495.0" onAction="#btnSaveOnClick" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #2E7D32; -fx-background-radius: 15;" text="Save" textFill="#f4f1f1">
+      <JFXButton layoutX="102.0" layoutY="673.0" onAction="#btnSaveOnClick" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #2E7D32; -fx-background-radius: 15;" text="Save" textFill="#f4f1f1">
          <font>
             <Font size="29.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="250.0" layoutY="495.0" onAction="#btnUpdateOnClick" prefHeight="62.0" prefWidth="135.0" style="-fx-background-color: #0000FF; -fx-background-radius: 15;" text="Update" textFill="#f4f1f1">
+      <JFXButton layoutX="252.0" layoutY="673.0" onAction="#btnUpdateOnClick" prefHeight="62.0" prefWidth="135.0" style="-fx-background-color: #0000FF; -fx-background-radius: 15;" text="Update" textFill="#f4f1f1">
          <font>
             <Font size="29.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="417.0" layoutY="495.0" onAction="#btnDeleteOnClick" prefHeight="46.0" prefWidth="126.0" style="-fx-background-color: #C62828; -fx-background-radius: 15;" text="Delete" textFill="#f4f1f1">
+      <JFXButton layoutX="419.0" layoutY="673.0" onAction="#btnDeleteOnClick" prefHeight="46.0" prefWidth="126.0" style="-fx-background-color: #C62828; -fx-background-radius: 15;" text="Delete" textFill="#f4f1f1">
          <font>
             <Font size="29.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="BookTable" layoutX="624.0" layoutY="264.0" onMouseClicked="#mouseClickOnTable" prefHeight="286.0" prefWidth="773.0">
+      <TableView fx:id="BookTable" layoutX="708.0" layoutY="395.0" onMouseClicked="#mouseClickOnTable" prefHeight="286.0" prefWidth="773.0">
         <columns>
           <TableColumn fx:id="BookId" prefWidth="75.0" text="Book ID" />
           <TableColumn fx:id="BookName" prefWidth="206.39996337890625" text="Book Name" />

@@ -9,34 +9,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="1530.0" style="-fx-background-color: #0097A7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookCategoryController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1530.0" style="-fx-background-color: #0097A7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookCategoryController">
    <children>
       <Label alignment="CENTER" layoutX="156.0" layoutY="14.0" prefHeight="80.0" prefWidth="1206.0" text="Book Category">
          <font>
             <Font size="54.0" />
          </font>
       </Label>
-      <Label layoutX="124.0" layoutY="199.0" prefHeight="42.0" prefWidth="203.0" text="Category Id" textFill="BLUE">
+      <Label layoutX="124.0" layoutY="237.0" prefHeight="42.0" prefWidth="203.0" text="Category Id" textFill="BLUE">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCategoryId" blendMode="MULTIPLY" layoutX="415.0" layoutY="202.0" prefHeight="42.0" prefWidth="182.0" promptText="Category Id" style="-fx-background-radius: 10;">
+      <TextField fx:id="txtCategoryId" blendMode="MULTIPLY" layoutX="415.0" layoutY="240.0" prefHeight="42.0" prefWidth="182.0" promptText="Category Id" style="-fx-background-radius: 10;">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="124.0" layoutY="291.0" prefHeight="50.0" prefWidth="262.0" text="Category Name" textFill="BLUE">
+      <Label layoutX="124.0" layoutY="329.0" prefHeight="50.0" prefWidth="262.0" text="Category Name" textFill="BLUE">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCategoryName" blendMode="MULTIPLY" layoutX="415.0" layoutY="294.0" prefHeight="42.0" prefWidth="291.0" promptText="Category Name" style="-fx-background-radius: 10;">
+      <TextField fx:id="txtCategoryName" blendMode="MULTIPLY" layoutX="415.0" layoutY="332.0" prefHeight="42.0" prefWidth="291.0" promptText="Category Name" style="-fx-background-radius: 10;">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <TableView fx:id="CategoryTable" layoutX="923.0" layoutY="193.0" onMouseClicked="#tableOnClick" prefHeight="246.0" prefWidth="352.0">
+      <TableView fx:id="CategoryTable" layoutX="923.0" layoutY="231.0" onMouseClicked="#tableOnClick" prefHeight="246.0" prefWidth="352.0">
         <columns>
           <TableColumn fx:id="CategoryId" prefWidth="125.5999755859375" text="Category ID" />
           <TableColumn fx:id="CategoryName" prefWidth="227.20001220703125" text="Category Name" />
@@ -47,17 +47,17 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="138.0" layoutY="467.0" onAction="#btnSaveOnAction" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #2E7D32; -fx-background-radius: 15;" text="Save" textFill="#f4f1f1">
+      <JFXButton layoutX="124.0" layoutY="582.0" onAction="#btnSaveOnAction" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #2E7D32; -fx-background-radius: 15;" text="Save" textFill="#f4f1f1">
          <font>
             <Font size="29.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="298.0" layoutY="467.0" onAction="#btnUpdateOnAction" prefHeight="50.0" prefWidth="151.0" style="-fx-background-color: #0000FF; -fx-background-radius: 15;" text="Update" textFill="#f4f1f1">
+      <JFXButton layoutX="284.0" layoutY="582.0" onAction="#btnUpdateOnAction" prefHeight="50.0" prefWidth="151.0" style="-fx-background-color: #0000FF; -fx-background-radius: 15;" text="Update" textFill="#f4f1f1">
          <font>
             <Font size="29.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="474.0" layoutY="467.0" onAction="#btnDeleteOnAction" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #C62828; -fx-background-radius: 15;" text="Delete" textFill="#f4f1f1">
+      <JFXButton layoutX="460.0" layoutY="582.0" onAction="#btnDeleteOnAction" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #C62828; -fx-background-radius: 15;" text="Delete" textFill="#f4f1f1">
          <font>
             <Font size="29.0" />
          </font>

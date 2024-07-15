@@ -9,6 +9,7 @@ import java.net.URL;
 
 import java.util.ArrayList;
 
+import dto.BookDto;
 import dto.MemberDto;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -31,12 +32,16 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import service.ServiceFactory;
 import service.ServiceFactory.ServiceType;
+import service.custom.BookService;
 import service.custom.MemberService;
 
 public class HomeController {
 
     private MemberService service = (MemberService) ServiceFactory.getInstance()
             .getService(ServiceFactory.ServiceType.MEMBERS);
+
+    private BookService bookService = (BookService) ServiceFactory.getInstance()
+            .getService(ServiceFactory.ServiceType.BOOKS);
 
     public HomeController() throws ClassNotFoundException, SQLException {
 
@@ -62,6 +67,33 @@ public class HomeController {
 
     @FXML
     private TableColumn<MemberDto, String> Telephone;
+    // Book Table
+    @FXML
+    private TableView<BookDto> tblBook;
+
+    @FXML
+    private TableColumn<BookDto, String> colAuthor;
+
+    @FXML
+    private TableColumn<BookDto, Integer> colBookCount;
+
+    @FXML
+    private TableColumn<BookDto, String> colBookId;
+
+    @FXML
+    private TableColumn<BookDto, String> colBookName;
+
+    @FXML
+    private TableColumn<BookDto, String> colCategoryId;
+
+    @FXML
+    private TableColumn<BookDto, String> colLanguage;
+
+    @FXML
+    private Label lblDifferentBookCount;
+
+    @FXML
+    private TextField searchBooks;
 
     @FXML
     private AnchorPane root;
@@ -90,8 +122,11 @@ public class HomeController {
     }
 
     @FXML
-    void btnBorrowOnAction(ActionEvent event) {
-
+    void btnBorrowOnAction(ActionEvent event) throws IOException {
+        this.root.getChildren().clear();
+        URL resource = getClass().getResource("/view/Borrow.fxml");
+        Parent root = FXMLLoader.load(resource);
+        this.root.getChildren().add(root);
     }
 
     @FXML
@@ -108,10 +143,14 @@ public class HomeController {
     }
 
     private ObservableList<MemberDto> masterData = FXCollections.observableArrayList();
+    private ObservableList<BookDto> BookData = FXCollections.observableArrayList();
+
     private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd  HH:mm:ss");
 
     @FXML
-    public void initialize() throws ClassNotFoundException, SQLException {
+    public void initialize() throws Exception {
+        // Member Table
+
         MemberId.setCellValueFactory(new PropertyValueFactory<>("member_Id"));
         FirstName.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         LastName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
@@ -144,6 +183,40 @@ public class HomeController {
         sortedData.comparatorProperty().bind(tblMember.comparatorProperty());
         tblMember.setItems(sortedData);
 
+        // Book Table
+        colBookId.setCellValueFactory(new PropertyValueFactory<>("Book_Id"));
+        colBookName.setCellValueFactory(new PropertyValueFactory<>("Book_Name"));
+        colLanguage.setCellValueFactory(new PropertyValueFactory<>("Language"));
+        colAuthor.setCellValueFactory(new PropertyValueFactory<>("Author"));
+        colBookCount.setCellValueFactory(new PropertyValueFactory<>("Book_Count"));
+        colCategoryId.setCellValueFactory(new PropertyValueFactory<>("Category_Id"));
+        loadBooks();
+
+        FilteredList<BookDto> filteredBook = new FilteredList<>(BookData, p -> true);
+        searchBooks.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredBook.setPredicate(book -> {
+
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (book.getBook_Id().toLowerCase().contains(lowerCaseFilter) ||
+                        book.getBook_Name().toLowerCase().contains(lowerCaseFilter) ||
+                        book.getLanguage().toLowerCase().contains(lowerCaseFilter) ||
+                        book.getAuthor().toLowerCase().contains(lowerCaseFilter) ||
+                        book.getCategory_Id().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                }
+                return false;
+            });
+        });
+
+        SortedList<BookDto> sortedBooks = new SortedList<>(filteredBook);
+        sortedBooks.comparatorProperty().bind(tblBook.comparatorProperty());
+        tblBook.setItems(sortedBooks);
+
         Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             LocalDateTime now = LocalDateTime.now();
             dateTimeLabel.setText(now.format(dateTimeFormatter));
@@ -160,6 +233,16 @@ public class HomeController {
         int MemberCount = tblMember.getItems().size();
         lblMemberCount.setText(Integer.toString(MemberCount));
         masterData.setAll(dtoArray);
+    }
+
+    public void loadBooks() throws Exception {
+        ArrayList<BookDto> dtoArray = bookService.getAll();
+
+        ObservableList<BookDto> data = FXCollections.observableArrayList(dtoArray);
+        this.tblBook.setItems(data);
+        int BookCount = tblBook.getItems().size();
+        lblDifferentBookCount.setText(Integer.toString(BookCount));
+        BookData.setAll(data);
     }
 
 }

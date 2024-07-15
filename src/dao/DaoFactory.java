@@ -22,7 +22,7 @@ public class DaoFactory {
     }
 
     public enum DaoType {
-        MEMBERS, BOOK_CATEGORY, BOOKS;
+        MEMBERS, BOOK_CATEGORY, BOOKS,BORROW;
     }
 
     public SuperDao getDaoType(DaoType type) {
@@ -35,6 +35,9 @@ public class DaoFactory {
 
             case BOOKS:
                 return new BookDaoImpl();
+
+            case BORROW:
+                 return new BookDaoImpl();
 
             default:
                 return null;
