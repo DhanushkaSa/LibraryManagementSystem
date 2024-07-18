@@ -49,12 +49,12 @@
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="40.0" layoutY="429.0" prefHeight="46.0" prefWidth="184.0" text="Return Date">
+      <Label layoutX="40.0" layoutY="429.0" prefHeight="46.0" prefWidth="184.0" text="Due Date">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtReturnDate" blendMode="MULTIPLY" layoutX="245.0" layoutY="434.0" prefHeight="46.0" prefWidth="195.0" promptText="Return Date" style="-fx-background-radius: 15;">
+      <TextField fx:id="txtDueDate" blendMode="MULTIPLY" layoutX="245.0" layoutY="429.0" prefHeight="46.0" prefWidth="195.0" promptText="Due Date" style="-fx-background-radius: 15;">
          <font>
             <Font size="21.0" />
          </font>
@@ -69,14 +69,14 @@
             <Font size="23.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblMemberDetails" layoutX="576.0" layoutY="259.0" prefHeight="46.0" prefWidth="425.0" text="Member Details" textFill="RED">
+      <Label fx:id="lblMemberDetails" layoutX="576.0" layoutY="259.0" prefHeight="46.0" prefWidth="643.0" text="Member Details" textFill="RED">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblBookDetails" layoutX="576.0" layoutY="351.0" prefHeight="46.0" prefWidth="425.0" text="Book Details" textFill="RED">
+      <Label fx:id="lblBookDetails" layoutX="576.0" layoutY="351.0" prefHeight="46.0" prefWidth="643.0" text="Book Details" textFill="RED">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
       <FontAwesomeIcon glyphName="DOWNLOAD" layoutX="496.0" layoutY="82.0" size="80">
@@ -97,20 +97,7 @@
             </LinearGradient>
          </fill>
       </FontAwesomeIcon>
-      <TableView fx:id="tblBorrow" layoutX="1080.0" layoutY="218.0" prefHeight="200.0" prefWidth="362.0">
-        <columns>
-          <TableColumn fx:id="colBorrowId" prefWidth="76.0" text="Borrow Id" />
-          <TableColumn fx:id="colMemberId" prefWidth="87.199951171875" text="Member Id" />
-            <TableColumn fx:id="colBookId" prefWidth="91.2000732421875" text="Book Id" />
-            <TableColumn fx:id="colReturnDate" prefWidth="105.60009765625" text="Return Date" />
-        </columns>
-      </TableView>
-      <JFXButton layoutX="245.0" layoutY="555.0" onAction="#btnAddOnAction" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #0000FF; -fx-background-radius: 15;" text="Add " textFill="#f7f1f1">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="1138.0" layoutY="657.0" onAction="#btnPlaceBorrowDataAction" prefHeight="80.0" prefWidth="303.0" style="-fx-background-color: #0000FF; -fx-background-radius: 15;" text="Place Borrow Data" textFill="#f7f1f1">
+      <JFXButton layoutX="1136.0" layoutY="651.0" onAction="#btnPlaceBorrowDataAction" prefHeight="80.0" prefWidth="303.0" style="-fx-background-color: #0000FF; -fx-background-radius: 15;" text="Place Borrow Data" textFill="#f7f1f1">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -121,5 +108,17 @@
          </font>
       </JFXButton>
       <FontAwesomeIcon glyphName="ARROW_LEFT" layoutX="48.0" layoutY="58.0" size="20" />
+      <FontAwesomeIcon glyphName="BOOK" layoutX="1307.0" layoutY="290.0" size="100" />
+      <FontAwesomeIcon glyphName="BOOK" layoutX="1372.0" layoutY="306.0" size="70" />
+      <FontAwesomeIcon glyphName="BOOK" layoutX="1407.0" layoutY="345.0" size="70" />
+      <TableView fx:id="tblBorrow" layoutX="306.0" layoutY="531.0" prefHeight="239.0" prefWidth="538.0">
+        <columns>
+          <TableColumn fx:id="colBorrowId" prefWidth="103.2000732421875" text="Borrow Id" />
+          <TableColumn fx:id="colMemberId" prefWidth="111.199951171875" text="Member Id" />
+            <TableColumn fx:id="colBookId" prefWidth="96.79998779296875" text="Book Id" />
+            <TableColumn fx:id="colDueDate" prefWidth="113.60009765625" text="Due Date" />
+            <TableColumn fx:id="colBorrowDate" prefWidth="108.800048828125" text="Borrow Date" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

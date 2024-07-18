@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import dao.custom.BookCategoryDaoImpl;
 import dao.custom.BookDaoImpl;
+import dao.custom.BorrowDaoImpl;
 import dao.custom.MemberDaoImpl;
 
 public class DaoFactory {
@@ -37,7 +38,7 @@ public class DaoFactory {
                 return new BookDaoImpl();
 
             case BORROW:
-                 return new BookDaoImpl();
+                 return new BorrowDaoImpl();
 
             default:
                 return null;
