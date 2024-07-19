@@ -36,4 +36,17 @@ public class BorrowDaoImpl implements BorrowDao {
         return entityArray;
     }
 
+    @Override
+    public BorrowEntity get(String BorrowId) throws Exception {
+        String sql="SELECT * FROM Borrow WHERE Borrow_Id=?";
+        PreparedStatement statement = DBConnection.getInstance().getConnection().prepareStatement(sql);
+        statement.setString(1,BorrowId);
+        ResultSet srt=statement.executeQuery();
+        if(srt.next()){
+            BorrowEntity entity=new BorrowEntity(srt.getString("Borrow_Id"), srt.getString("Member_Id"), srt.getString("Book_Id"), srt.getString("DueDate"), srt.getString("Borrow_Date"));
+            return entity;
+        }
+        return null;
+    }
+
 }

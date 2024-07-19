@@ -10,4 +10,6 @@ public interface BorrowDao extends SuperDao {
     public String save(BorrowEntity entity) throws Exception;
 
     public ArrayList<BorrowEntity> getAll() throws Exception;
+
+    public BorrowEntity get(String BorrowId) throws Exception;
 }

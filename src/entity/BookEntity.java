@@ -62,7 +62,7 @@ public class BookEntity {
     public void setBook_Count(Integer book_Count) {
         Book_Count = book_Count;
     }
-
+ 
     public String getCategory_Id() {
         return Category_Id;
     }

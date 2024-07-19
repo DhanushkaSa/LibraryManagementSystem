@@ -105,6 +105,9 @@ public class HomeController {
     private TextField searchMember;
 
     @FXML
+    private Label lblMemberCount;
+
+    @FXML
     void btnBookCategoryOnAction(ActionEvent event) throws IOException {
         this.root.getChildren().clear();
         URL resource = getClass().getResource("/view/BookCategory.fxml");
@@ -129,8 +132,16 @@ public class HomeController {
         this.root.getChildren().add(root);
     }
 
+    
+
     @FXML
-    private Label lblMemberCount;
+    void btnBookReturnOnAction(ActionEvent event) throws IOException {
+           this.root.getChildren().clear();
+           URL resource = getClass().getResource("/view/BookReturn.fxml");
+           Parent root=FXMLLoader.load(resource);
+           this.root.getChildren().add(root);
+    }
+
 
     @FXML
     void btnMembersOnAction(ActionEvent event) throws IOException {

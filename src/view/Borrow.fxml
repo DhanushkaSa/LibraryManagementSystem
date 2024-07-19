@@ -12,11 +12,11 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1530.0" style="-fx-background-color: #9E9D24;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BorrowController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1558.0" style="-fx-background-color: linear-gradient(to right, #43c6ac, #191654);" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BorrowController">
    <children>
-      <Label alignment="CENTER" layoutX="144.0" layoutY="14.0" prefHeight="65.0" prefWidth="1234.0" text="Borrow Books">
+      <Label alignment="CENTER" layoutX="144.0" layoutY="14.0" prefHeight="65.0" prefWidth="1234.0" text="Borrow Books" textFill="#efecec">
          <font>
-            <Font size="54.0" />
+            <Font name="System Italic" size="54.0" />
          </font>
       </Label>
       <Label layoutX="41.0" layoutY="167.0" prefHeight="46.0" prefWidth="144.0" text="Borrow Id">
@@ -69,12 +69,12 @@
             <Font size="23.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblMemberDetails" layoutX="576.0" layoutY="259.0" prefHeight="46.0" prefWidth="643.0" text="Member Details" textFill="RED">
+      <Label fx:id="lblMemberDetails" layoutX="576.0" layoutY="259.0" prefHeight="46.0" prefWidth="643.0" text="Member Details" textFill="#690e0e">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblBookDetails" layoutX="576.0" layoutY="351.0" prefHeight="46.0" prefWidth="643.0" text="Book Details" textFill="RED">
+      <Label fx:id="lblBookDetails" layoutX="576.0" layoutY="351.0" prefHeight="46.0" prefWidth="643.0" text="Book Details" textFill="#690e0e">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -108,9 +108,9 @@
          </font>
       </JFXButton>
       <FontAwesomeIcon glyphName="ARROW_LEFT" layoutX="48.0" layoutY="58.0" size="20" />
-      <FontAwesomeIcon glyphName="BOOK" layoutX="1307.0" layoutY="290.0" size="100" />
-      <FontAwesomeIcon glyphName="BOOK" layoutX="1372.0" layoutY="306.0" size="70" />
-      <FontAwesomeIcon glyphName="BOOK" layoutX="1407.0" layoutY="345.0" size="70" />
+      <FontAwesomeIcon fill="#efecec" glyphName="BOOK" layoutX="1307.0" layoutY="290.0" size="100" />
+      <FontAwesomeIcon fill="#efecec" glyphName="BOOK" layoutX="1372.0" layoutY="306.0" size="70" />
+      <FontAwesomeIcon fill="#efecec" glyphName="BOOK" layoutX="1407.0" layoutY="345.0" size="70" />
       <TableView fx:id="tblBorrow" layoutX="306.0" layoutY="531.0" prefHeight="239.0" prefWidth="538.0">
         <columns>
           <TableColumn fx:id="colBorrowId" prefWidth="103.2000732421875" text="Borrow Id" />

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1558.0" style="-fx-background-color: linear-gradient(#38f49c, #3ac902);" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookReturnController">
+   <children>
+      <Label alignment="CENTER" layoutX="179.0" layoutY="14.0" prefHeight="44.0" prefWidth="1210.0" text="Book Return">
+         <font>
+            <Font name="System Italic" size="60.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="37.0" layoutY="27.0" onAction="#btnBackOnAction" prefHeight="43.0" prefWidth="90.0" style="-fx-background-color: #ff0000; -fx-background-radius: 15;" text="Back" textFill="#efeded">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIcon glyphName="ARROW_LEFT" layoutX="43.0" layoutY="56.0" size="20" />
+      <Label alignment="CENTER" layoutX="616.0" layoutY="145.0" prefHeight="46.0" prefWidth="166.0" text="Borrow Id">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBorrowId" alignment="CENTER" blendMode="MULTIPLY" layoutX="802.0" layoutY="146.0" prefHeight="39.0" prefWidth="150.0" promptText="Borrow Id" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <JFXButton alignment="CENTER" layoutX="1011.0" layoutY="141.0" onAction="#btnSearchOnAction" prefHeight="54.0" prefWidth="150.0" style="-fx-background-color: #0000ff; -fx-background-radius: 15;" text="Search" textFill="#f6f6fa">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="155.0" layoutY="285.0" prefHeight="394.0" prefWidth="426.0" style="-fx-background-color: black; -fx-background-radius: 20;">
+         <children>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="17.0" prefHeight="46.0" prefWidth="416.0" text="Member Details" textFill="#2de116">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="133.0" prefHeight="30.0" prefWidth="130.0" text="First Name" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFirstName" layoutX="171.0" layoutY="133.0" prefHeight="30.0" prefWidth="240.0" text="first name" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="174.0" prefHeight="30.0" prefWidth="130.0" text="Last Name" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLastName" layoutX="169.0" layoutY="174.0" prefHeight="30.0" prefWidth="246.0" text="last name" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="223.0" prefHeight="30.0" prefWidth="130.0" text="Telephone" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTelephone" layoutX="169.0" layoutY="223.0" prefHeight="30.0" prefWidth="240.0" text="telephone" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="267.0" prefHeight="30.0" prefWidth="130.0" text="Due Date" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDueDate" layoutX="167.0" layoutY="267.0" prefHeight="30.0" prefWidth="240.0" text="due date" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="316.0" prefHeight="30.0" prefWidth="130.0" text="Borrow Date" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBorrowDate" layoutX="167.0" layoutY="316.0" prefHeight="30.0" prefWidth="240.0" text="borrow date" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="89.0" prefHeight="30.0" prefWidth="130.0" text="Member Id" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMemberId" layoutX="171.0" layoutY="89.0" prefHeight="30.0" prefWidth="240.0" text="member Id" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="633.0" layoutY="285.0" prefHeight="394.0" prefWidth="435.0" style="-fx-background-color: black; -fx-background-radius: 20;">
+         <children>
+            <Label alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="46.0" prefWidth="426.0" text="Book Details" textFill="#2de116">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="136.0" prefHeight="30.0" prefWidth="130.0" text="Book Name" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBookName" layoutX="174.0" layoutY="136.0" prefHeight="30.0" prefWidth="246.0" text="book name" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="185.0" prefHeight="30.0" prefWidth="130.0" text="Language" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLanguage" layoutX="174.0" layoutY="185.0" prefHeight="30.0" prefWidth="246.0" text="language" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="234.0" prefHeight="30.0" prefWidth="130.0" text="Author" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAuthor" layoutX="174.0" layoutY="234.0" prefHeight="30.0" prefWidth="246.0" text="author" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="88.0" prefHeight="30.0" prefWidth="130.0" text="Book Id" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBookId" layoutX="174.0" layoutY="88.0" prefHeight="30.0" prefWidth="246.0" text="book id" textFill="#efeeee">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblReturnBook" layoutX="1125.0" layoutY="332.0" prefHeight="253.0" prefWidth="387.0">
+        <columns>
+          <TableColumn fx:id="colReturnId" prefWidth="75.0" text="Return Id" />
+          <TableColumn fx:id="colReturnDate" prefWidth="88.800048828125" text="Return Date" />
+            <TableColumn fx:id="colFine" prefWidth="111.2001953125" text="Fine" />
+            <TableColumn fx:id="colBorrowId" prefWidth="111.2001953125" text="Borrow Id" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1162.0" layoutY="665.0" onAction="#btnProcessFineOnAction" prefHeight="80.0" prefWidth="331.0" style="-fx-background-color: #ff0000; -fx-background-radius: 30;" text="Process Fine" textFill="#efeded">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIcon glyphName="MONEY" layoutX="1172.0" layoutY="722.0" size="50" />
+      <Label alignment="CENTER" layoutX="1125.0" layoutY="250.0" prefHeight="46.0" prefWidth="209.0" text="Enter return Id ">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtReturnId" alignment="CENTER" blendMode="MULTIPLY" layoutX="1354.0" layoutY="250.0" prefHeight="39.0" prefWidth="150.0" promptText="Return Id" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

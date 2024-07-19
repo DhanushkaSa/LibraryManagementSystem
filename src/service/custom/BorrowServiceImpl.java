@@ -87,4 +87,11 @@ public class BorrowServiceImpl implements BorrowService {
         return borrowArray;
     }
 
+    @Override
+    public BorrowDto get(String BorrowId) throws Exception {
+        BorrowEntity entity=borrowDao.get(BorrowId);
+        BorrowDto dto=new BorrowDto(entity.getBorrow_Id(), entity.getMember_Id(), entity.getBook_Id(), entity.getDueDate(), entity.getBorrow_Date(), null);
+        return dto;
+    }
+
 }

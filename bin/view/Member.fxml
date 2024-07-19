@@ -13,14 +13,14 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1530.0" style="-fx-background-color: #EFC33D;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MemberController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1558.0" style="-fx-background-color: linear-gradient(to right,#667eea,#764ba2);" styleClass="linear-gradient(to right,#667eea,#764ba2)" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MemberController">
    <children>
-      <Label alignment="CENTER" layoutX="241.0" layoutY="20.0" prefHeight="80.0" prefWidth="1036.0" text="Member Registration">
+      <Label alignment="CENTER" layoutX="241.0" layoutY="20.0" prefHeight="80.0" prefWidth="1036.0" text="Member Registration" textFill="#f7f2f2">
          <font>
-            <Font size="54.0" />
+            <Font name="System Italic" size="54.0" />
          </font>
       </Label>
-      <Label layoutX="39.0" layoutY="172.0" prefHeight="34.0" prefWidth="157.0" text="Member Id" textFill="BLUE">
+      <Label layoutX="39.0" layoutY="172.0" prefHeight="34.0" prefWidth="157.0" text="Member Id" textFill="#202020">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -33,7 +33,7 @@
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="39.0" layoutY="255.0" prefHeight="34.0" prefWidth="157.0" text="First Name" textFill="BLUE">
+      <Label layoutX="39.0" layoutY="255.0" prefHeight="34.0" prefWidth="157.0" text="First Name" textFill="#202020">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -43,7 +43,7 @@
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="39.0" layoutY="331.0" prefHeight="34.0" prefWidth="157.0" text="Last Name" textFill="BLUE">
+      <Label layoutX="39.0" layoutY="331.0" prefHeight="34.0" prefWidth="157.0" text="Last Name" textFill="#202020">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -53,7 +53,7 @@
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="39.0" layoutY="414.0" prefHeight="34.0" prefWidth="157.0" text="Address" textFill="BLUE">
+      <Label layoutX="39.0" layoutY="414.0" prefHeight="34.0" prefWidth="157.0" text="Address" textFill="#202020">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -63,7 +63,7 @@
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="39.0" layoutY="486.0" prefHeight="34.0" prefWidth="157.0" text="Age" textFill="BLUE">
+      <Label layoutX="39.0" layoutY="486.0" prefHeight="34.0" prefWidth="157.0" text="Age" textFill="#202020">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -73,7 +73,7 @@
             <Font size="21.0" />
          </font>
       </TextField>
-      <Label layoutX="39.0" layoutY="558.0" prefHeight="34.0" prefWidth="157.0" text="Telephone" textFill="BLUE">
+      <Label layoutX="39.0" layoutY="558.0" prefHeight="34.0" prefWidth="157.0" text="Telephone" textFill="#202020">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -115,16 +115,16 @@
       </JFXButton>
       <FontAwesomeIcon glyphName="USER" layoutX="436.0" layoutY="75.0" size="70">
          <fill>
-            <LinearGradient endX="1.0" endY="1.0" startX="0.11026615652294666" startY="0.3764258410087557">
+            <LinearGradient endX="0.5019011261798583" endY="0.28517107274595777" startX="0.003802282275355814" startY="0.3422052932782772">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.2862745225429535" green="0.07450980693101883" blue="0.7882353067398071" />
+                        <Color red="0.45701754093170166" green="0.4736842215061188" blue="0.14035087823867798" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.876532793045044" green="0.8443664908409119" blue="0.9578947424888611" />
+                        <Color red="0.7660114765167236" green="0.8199999928474426" blue="0.20499999821186066" />
                      </color>
                   </Stop>
                </stops>

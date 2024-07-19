@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import dao.custom.BookCategoryDaoImpl;
 import dao.custom.BookDaoImpl;
+import dao.custom.BookReturnDaoImpl;
 import dao.custom.BorrowDaoImpl;
 import dao.custom.MemberDaoImpl;
 
@@ -23,7 +24,7 @@ public class DaoFactory {
     }
 
     public enum DaoType {
-        MEMBERS, BOOK_CATEGORY, BOOKS,BORROW;
+        MEMBERS, BOOK_CATEGORY, BOOKS,BORROW,BOOK_RETURN;
     }
 
     public SuperDao getDaoType(DaoType type) {
@@ -39,6 +40,9 @@ public class DaoFactory {
 
             case BORROW:
                  return new BorrowDaoImpl();
+
+            case BOOK_RETURN:
+                 return new BookReturnDaoImpl();
 
             default:
                 return null;
