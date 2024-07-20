@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1558.0" style="-fx-background-color: linear-gradient(to right, #005c97, #363795);" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookCategoryController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1558.0" style="-fx-background-color: linear-gradient(to top left, #A100FFFF, #119CFDFF);" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookCategoryController">
    <children>
       <Label alignment="CENTER" layoutX="156.0" layoutY="14.0" prefHeight="80.0" prefWidth="1206.0" text="Book Category" textFill="#f7f7fc">
          <font>
