@@ -12,4 +12,6 @@ public interface BorrowDao extends SuperDao {
     public ArrayList<BorrowEntity> getAll() throws Exception;
 
     public BorrowEntity get(String BorrowId) throws Exception;
+
+    public String delete(String BorrowId)throws Exception;
 }

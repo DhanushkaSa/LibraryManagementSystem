@@ -7,7 +7,6 @@ public class BookReturnDto {
     private String Return_Id;
     private String Return_Date;
     private Double Fine;
-    private String Borrow_Id;
     private ArrayList<BorrowDto> borrowDtos;
     private ArrayList<MemberDto> memberDtos;
     private ArrayList<BookDto> bookDtos;
@@ -16,12 +15,11 @@ public class BookReturnDto {
 
     }
 
-    public BookReturnDto(String return_Id, String return_Date, Double fine, String borrow_Id,
-            ArrayList<BorrowDto> borrowDtos, ArrayList<MemberDto> memberDtos, ArrayList<BookDto> bookDtos) {
+    public BookReturnDto(String return_Id, String return_Date, Double fine, ArrayList<BorrowDto> borrowDtos,
+            ArrayList<MemberDto> memberDtos, ArrayList<BookDto> bookDtos) {
         Return_Id = return_Id;
         Return_Date = return_Date;
         Fine = fine;
-        Borrow_Id = borrow_Id;
         this.borrowDtos = borrowDtos;
         this.memberDtos = memberDtos;
         this.bookDtos = bookDtos;
@@ -51,14 +49,6 @@ public class BookReturnDto {
         Fine = fine;
     }
 
-    public String getBorrow_Id() {
-        return Borrow_Id;
-    }
-
-    public void setBorrow_Id(String borrow_Id) {
-        Borrow_Id = borrow_Id;
-    }
-
     public ArrayList<BorrowDto> getBorrowDtos() {
         return borrowDtos;
     }
@@ -86,9 +76,11 @@ public class BookReturnDto {
     @Override
     public String toString() {
         return "BookReturnDto [Return_Id=" + Return_Id + ", Return_Date=" + Return_Date + ", Fine=" + Fine
-                + ", Borrow_Id=" + Borrow_Id + ", borrowDtos=" + borrowDtos + ", memberDtos=" + memberDtos
-                + ", bookDtos=" + bookDtos + "]";
+                + ", borrowDtos=" + borrowDtos + ", memberDtos=" + memberDtos + ", bookDtos=" + bookDtos + "]";
     }
+
+    
+   
 
     
 }

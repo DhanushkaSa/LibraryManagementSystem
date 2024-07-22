@@ -13,4 +13,6 @@ public interface BorrowService extends SuperService{
     public ArrayList<BorrowDto> getAll()throws Exception;
 
     public BorrowDto get(String BorrowId)throws Exception;
+
+    public String delete(String BorrowId)throws Exception;
 }

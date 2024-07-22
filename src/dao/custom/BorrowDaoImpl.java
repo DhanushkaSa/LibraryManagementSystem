@@ -49,4 +49,13 @@ public class BorrowDaoImpl implements BorrowDao {
         return null;
     }
 
+    @Override
+    public String delete(String BorrowId) throws Exception {
+        String sql="DELETE FROM Borrow WHERE Borrow_Id=?";
+        PreparedStatement statement = DBConnection.getInstance().getConnection().prepareStatement(sql);
+        statement.setString(1,BorrowId);
+        int value = statement.executeUpdate();
+        return value > 0 ? "Delete Successfully !!" : "Delete Fail !!";
+    }
+
 }

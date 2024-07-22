@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1558.0" style="-fx-background-color: linear-gradient(#38f49c, #3ac902);" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookReturnController">
    <children>
       <Label alignment="CENTER" layoutX="179.0" layoutY="14.0" prefHeight="44.0" prefWidth="1210.0" text="Book Return">
@@ -156,12 +155,11 @@
             </Label>
          </children>
       </AnchorPane>
-      <TableView fx:id="tblReturnBook" layoutX="1125.0" layoutY="332.0" prefHeight="253.0" prefWidth="387.0">
+      <TableView fx:id="tblReturnBook" layoutX="1215.0" layoutY="332.0" prefHeight="254.0" prefWidth="297.0">
         <columns>
-          <TableColumn fx:id="colReturnId" prefWidth="75.0" text="Return Id" />
-          <TableColumn fx:id="colReturnDate" prefWidth="88.800048828125" text="Return Date" />
-            <TableColumn fx:id="colFine" prefWidth="111.2001953125" text="Fine" />
-            <TableColumn fx:id="colBorrowId" prefWidth="111.2001953125" text="Borrow Id" />
+          <TableColumn fx:id="colReturnId" prefWidth="82.4000244140625" text="Return Id" />
+          <TableColumn fx:id="colReturnDate" prefWidth="119.199951171875" text="Return Date" />
+            <TableColumn fx:id="colFine" prefWidth="76.0" text="Fine" />
         </columns>
       </TableView>
       <JFXButton layoutX="1162.0" layoutY="665.0" onAction="#btnProcessFineOnAction" prefHeight="80.0" prefWidth="331.0" style="-fx-background-color: #ff0000; -fx-background-radius: 30;" text="Process Fine" textFill="#efeded">
@@ -180,5 +178,15 @@
             <Font size="21.0" />
          </font>
       </TextField>
+      <Label layoutX="507.0" layoutY="728.0" prefHeight="47.0" prefWidth="287.0" text="Your fine is :     Rs. " textFill="RED">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFine" layoutX="792.0" layoutY="728.0" prefHeight="47.0" prefWidth="130.0" text=" 0.00" textFill="RED">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

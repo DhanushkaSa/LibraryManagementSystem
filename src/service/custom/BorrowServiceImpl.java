@@ -94,4 +94,9 @@ public class BorrowServiceImpl implements BorrowService {
         return dto;
     }
 
+    @Override
+    public String delete(String BorrowId) throws Exception {
+        return borrowDao.delete(BorrowId);
+    }
+
 }

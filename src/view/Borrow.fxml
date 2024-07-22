@@ -54,7 +54,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtDueDate" blendMode="MULTIPLY" layoutX="245.0" layoutY="429.0" prefHeight="46.0" prefWidth="195.0" promptText="Due Date" style="-fx-background-radius: 15;">
+      <TextField fx:id="txtDueDate" blendMode="MULTIPLY" layoutX="245.0" layoutY="429.0" prefHeight="46.0" prefWidth="195.0" promptText="YYYY-MM-DD" style="-fx-background-radius: 15;">
          <font>
             <Font size="21.0" />
          </font>
