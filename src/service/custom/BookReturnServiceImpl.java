@@ -75,7 +75,7 @@ public class BookReturnServiceImpl implements BookReturnService {
             }
         } catch (Exception e) {
             connection.rollback();
-            return "Server Error !!!";
+            return "Server error !!!";
         } finally {
             connection.setAutoCommit(true);
         }

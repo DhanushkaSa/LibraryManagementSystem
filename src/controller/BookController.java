@@ -96,7 +96,7 @@ public class BookController {
             if (BookId.trim().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Please select a book !!");
             } else {
-                int value = JOptionPane.showConfirmDialog(null, "Do you want to delete this book", BookId, 0, 0);
+                int value = JOptionPane.showConfirmDialog(null, "Do you want to delete this book ?", BookId, 0);
                 if (value == 0) {
                     String resp = service.delete(BookId);
                 }

@@ -126,7 +126,7 @@ public class MemberController {
             } else {
                 String Member_Id = txtMemberId.getText();
 
-                int value = JOptionPane.showConfirmDialog(null, "Do you want to delete this member ?", Member_Id, 0, 0);
+                int value = JOptionPane.showConfirmDialog(null, "Do you want to delete this member ?", Member_Id, 0);
                 if (value == 0) {
                     String resp = service.Delete(Member_Id);
                 }
